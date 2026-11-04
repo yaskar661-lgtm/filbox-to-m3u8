@@ -2,7 +2,7 @@ from flask import Flask, redirect, abort
 
 app = Flask(__name__)
 
-@app.route('/<channel_slug>')
+@app.route('/stream/<channel_slug>.m3u8')
 def channel_redirect(channel_slug):
     # channel_slug içinde güvenlik veya geçersiz karakter kontrolü yapılabilir,
     # ancak doğrudan istediğin mantığı uyguluyoruz:
